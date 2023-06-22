@@ -3,6 +3,16 @@ name = "massa-api-loadtest"
 version = "0.1.0"
 edition = "2021"
 
+default-run = "tonic"
+
+[[bin]]
+name = "tonic"
+path = "src/tonic.rs"
+
+[[bin]]
+name = "jsonrpsee"
+path = "src/jsonrpsee.rs"
+
 [dependencies]
 anyhow = "1.0.71"
 jsonrpsee = { version = "0.18.2", features = ["server", "macros"] }
